@@ -8,9 +8,10 @@
     },
     "files": [
         "README.md",
-        "MC1/*"
+        "MC1/*",
+        "MC1/lesson2.md"
     ],
-    "testFiles": [],
+    "testFiles": ["MC1/lesson3.md"],
     "public": true,
     "supportedTargets": [
         "minecraft"
