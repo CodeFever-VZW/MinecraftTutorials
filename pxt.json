@@ -1,0 +1,19 @@
+{
+    "name": "MinecraftTutorial",
+    "version": "0.7.3",
+    "description": "Minecraft tutorials for codecosmos",
+    "license": "none",
+    "dependencies": {
+        "core": "*"
+    },
+    "files": [
+        "README.md",
+        "MC1/*"
+    ],
+    "testFiles": [],
+    "public": true,
+    "supportedTargets": [
+        "minecraft"
+    ],
+    "preferredEditor": "blocks"
+}
