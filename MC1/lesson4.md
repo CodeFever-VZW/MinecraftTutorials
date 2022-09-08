@@ -21,7 +21,7 @@ player.onChat("", function () {
     builder.place(GRASS)
     builder.move(FORWARD, 1)
     for (let index = 0; index < 4; index++) {
-    	
+
     }
     blocks.place(GRASS, pos(0, 0, 0))
     mobs.spawn(CHICKEN, pos(randint(0, 10), 0, 0))
@@ -30,7 +30,7 @@ player.onChat("", function () {
 
 ## The floor is lava
 
-Kijk op het leerplatform hoe van de vloer lava maakt.
+Kijk op het leerplatform hoe je van de vloer lava maakt.
 
 ![The floor is lava](https://codefeverpublic.blob.core.windows.net/public-content/images/b2d985346f98d21e17bce8a52b49b89382e2ff3dc5de661b69f453defd35601e.png)
 
