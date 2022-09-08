@@ -30,18 +30,20 @@ player.onChat("", function () {
 
 ## The floor is lava
 
-Kijk op het leerplatform hoe je van de vloer lava maakt.
+Kijk op het [leerplatform](https://leerplatform.codefever.be/) hoe je van de vloer lava maakt.
+
+[Klik hier om naar het leerplatform te gaan](https://leerplatform.codefever.be/).
 
 ![The floor is lava](https://codefeverpublic.blob.core.windows.net/public-content/images/b2d985346f98d21e17bce8a52b49b89382e2ff3dc5de661b69f453defd35601e.png)
 
 ## Douche
 
-Kijk op het leerplatform hoe je een douche maakt.
+Kijk op het [leerplatform](https://leerplatform.codefever.be/) hoe je een douche maakt.
 
 ![Douche](https://codefeverpublic.blob.core.windows.net/public-content/images/8f111f353a563910041270e0b32d9bd23aafddccbbd56a70759f6270aeab30ed.png)
 
 ## Spookhuis
 
-Kijk op het leerplatform hoe je een spookhuis maakt.
+Kijk op het [leerplatform](https://leerplatform.codefever.be/) hoe je een spookhuis maakt.
 
 ![Spookhuis](https://media.giphy.com/media/Yph6D7zPIVtIc/giphy.gif)

@@ -22,24 +22,27 @@ player.onChat("", function () {
 
 ## Spawnen
 
-Kijk op het leerplatform hoe je dieren en monsters spawnt.
+Kijk op het [leerplatform](https://leerplatform.codefever.be/) hoe je dieren en monsters spawnt.
+
+
+[Klik hier om naar het leerplatform te gaan](https://leerplatform.codefever.be/).
 
 ![Spawnen](https://codefeverpublic.blob.core.windows.net/public-content/images/71957348b7d7626169e457f3ee303ef225e65256eb503a227c1212faa4a989b0.png)
 
 ## Kippenregen
 
-Kijk op het leerplatform hoe je het kippen laat regenen.
+Kijk op het [leerplatform](https://leerplatform.codefever.be/) hoe je het kippen laat regenen.
 
 ![Kippenregen](https://codefeverpublic.blob.core.windows.net/public-content/images/87809b863eacf103b6be12fd7ed4112f97338240c952cdf43a4a3be5f0df29cb.png)
 
 ## Snelbouw
 
-Kijk op het leerplatform hoe je snel gebouwen kan plaatsen.
+Kijk op het [leerplatform](https://leerplatform.codefever.be/) hoe je snel gebouwen kan plaatsen.
 
 ![Snelbouw](https://codefeverpublic.blob.core.windows.net/public-content/images/9b446bbe1fc5eb802d5834534f99cd65c25cc7820da0479ad39277425d91f904.png)
 
 ## Bouwen door te vernietigen
 
-Kijk op het leerplatform hoe je kan bouwen door te vernietigen.
+Kijk op het [leerplatform](https://leerplatform.codefever.be/) hoe je kan bouwen door te vernietigen.
 
 ![Bouwen door te vernietigen](https://codefeverpublic.blob.core.windows.net/public-content/images/0faa68d194645bc65172f6ee4c4dd3329c077b5797eece2019891cc63881a435.png)
