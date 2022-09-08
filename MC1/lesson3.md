@@ -1,5 +1,5 @@
 # MC Reeks 1 Les 3
-### @hideIteration true
+
 ```template
 player.onChat("spawn", function () {})
 player.onChat("kippenregen", function () {})

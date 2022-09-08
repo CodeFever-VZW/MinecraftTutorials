@@ -1,5 +1,5 @@
 # MC Reeks 1 Les 2
-### @hideIteration true
+
 ```template
 player.onChat("rups", function () {})
 player.onChat("toren", function () {})
