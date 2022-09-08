@@ -1,5 +1,5 @@
 # MC Reeks 1 Les 4
-
+### @hideIteration true
 ```template
 player.onChat("lava", function () {})
 player.onChat("douche", function () {})

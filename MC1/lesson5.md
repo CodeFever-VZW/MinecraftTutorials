@@ -1,5 +1,5 @@
 # MC Reeks 1 Les 5
-
+### @hideIteration true
 ```template
 player.onChat("plaatslucifer", function () {})
 player.onChat("steekluciferaan", function () {})
