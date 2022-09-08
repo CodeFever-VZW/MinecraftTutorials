@@ -22,6 +22,8 @@ player.onChat("", function () {
 
 ## Rups
 
+# Rups
+
 Kijk op het [leerplatform](https://leerplatform.codefever.be/) hoe je een rups maakt.
 
 [Klik hier om naar het leerplatform te gaan](https://leerplatform.codefever.be/).
