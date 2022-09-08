@@ -40,7 +40,7 @@ Kijk op het leerplatform hoe je een trap maakt.
 
 ## Toren met lus
 
-Kijk op het leerplatform hoe je een trap maakt doormiddel van lussen.
+Kijk op het leerplatform hoe je een trap maakt met behulp van lussen.
 
 ![Toren](https://codefeverpublic.blob.core.windows.net/public-content/images/0db2bf14c73e3eb8e69d96f03a554c3c340be45fb45d92ccaa16274283a4dbf8.png)
 
