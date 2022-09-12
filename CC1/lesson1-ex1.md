@@ -1,4 +1,4 @@
-## Missie 1
+# Missie 1
 
 ```blocks
 
@@ -47,6 +47,6 @@ function zetKlaar() {
 }
 ```
 
-### Agent Testen
+## Agent Testen
 
 Gebruik het leerplatform om de oefeningen op te lossen
