@@ -7,6 +7,7 @@ player.onChat("bouwTrap", function () {
 ```
 
 ```blocks
+let afstand = 1;
 player.onChat("brug", function (num1) {
 	
 })
