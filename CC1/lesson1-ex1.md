@@ -42,6 +42,9 @@ player.onChat("start", function() {
     zetKlaar();
 })
 
+/**
+ *Dit blokje moet je niet programmeren.
+ */
 function zetKlaar() {
     agent.teleport(world(87, 72, -28), EAST);
 }
