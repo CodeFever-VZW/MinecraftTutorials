@@ -61,6 +61,8 @@ function doSomething () {
 
 ## Snakepit
 
+Gebruik zeker de startcoördinaten!
+
 Kijk op het [leerplatform](https://leerplatform.codefever.be/) voor meer uitleg.
 
 ![Snakepit](https://codefeverpublic.blob.core.windows.net/public-content/images/b2d975509d6804759ee55656470bbdd16f4a313ad6b20be26e859ebd6b2a020b.png)
