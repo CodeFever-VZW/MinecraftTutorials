@@ -1,4 +1,4 @@
-# MC Algemeen 1 Les 2
+# MC Reeks 1 Les 2 vertaald
 
 ```template
 player.onChat("rups", function () {})
