@@ -29,7 +29,7 @@ player.onChat("run", function () {
     while (0 == 0 == "") {
         doSomething()
     }
-    if (true) {
+    if (!true) {
 
     }
     index += 1
