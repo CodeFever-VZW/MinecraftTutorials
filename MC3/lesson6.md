@@ -11,7 +11,7 @@ player.onChat("run", function () {
     list = [list[0], 1]
     text_list = [
     [],
-    list.length,›
+    list.length,
     list.removeAt(0),
     [list.pop(), list.shift(), list._pickRandom()]
     ]
