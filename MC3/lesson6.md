@@ -11,7 +11,7 @@ player.onChat("run", function () {
     list = [list[0], 1]
     text_list = [
     [],
-    list.length,
+    list.length,›
     list.removeAt(0),
     [list.pop(), list.shift(), list._pickRandom()]
     ]
@@ -36,6 +36,7 @@ player.onChat("run", function () {
 
     }
     blocks.place(GRASS, pos(0, 0, 0))
+    randint(0, 10)
 })
 
 ```
