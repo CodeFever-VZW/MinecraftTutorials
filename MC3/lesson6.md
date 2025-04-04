@@ -36,7 +36,7 @@ player.onChat("run", function () {
 
     }
     blocks.place(GRASS, pos(0, 0, 0))
-    randint(0, 10)
+    blocks.place(list[randint(0, 10)], pos(0, 0, 0))
 })
 
 ```
