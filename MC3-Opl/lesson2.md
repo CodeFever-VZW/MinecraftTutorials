@@ -25,9 +25,9 @@ player.onChat("level1", function () {
 })
 player.onChat("level2", function () {
     player.say(":)")
+    Klaar = 0
     agent.teleport(world(-85, 66, 285), NORTH)
-    drukplaten = 0
-    while (drukplaten < 3) {
+    while (Klaar != 0) {
         if (!(agent.detect(AgentDetection.Block, RIGHT))) {
             agent.turn(RIGHT_TURN)
             agent.move(FORWARD, 1)
@@ -41,9 +41,6 @@ player.onChat("level2", function () {
             agent.turn(RIGHT_TURN)
             agent.move(FORWARD, 1)
         }
-        if (agent.detect(AgentDetection.Redstone, DOWN)) {
-            drukplaten += 1
-        }
     }
 })
 function plaatsBrugBlok () {
@@ -53,10 +50,11 @@ function plaatsBrugBlok () {
 }
 player.onChat("level3", function () {
     player.say(":)")
+    Klaar = 0
     agent.setItem(POLISHED_GRANITE, 64, 1)
     agent.teleport(world(-84, 67, 224), NORTH)
     plaatsBrugBlok()
-    while (klaar !== 0) {
+    while (Klaar != 0) {
         agent.move(RIGHT, 1)
         if (agent.detect(AgentDetection.Redstone, DOWN)) {
             agent.turn(RIGHT_TURN)
