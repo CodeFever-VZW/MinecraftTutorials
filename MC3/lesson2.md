@@ -21,7 +21,7 @@ let Klaar = 0
 player.onChat("stop", function () {
     Klaar = 1;
 });
-player.onChat("Doolhof1", function () {
+player.onChat("level1", function () {
     agent.teleport(world(-86, 66, 325), NORTH)
     Klaar = 0
     while (Klaar == 0) {
@@ -43,7 +43,7 @@ player.onChat("Doolhof1", function () {
         }
     }
 })
-player.onChat("Doolhof2", function () {
+player.onChat("level2", function () {
     agent.teleport(world(-85, 66, 285), NORTH)
     Klaar = 0
     while (Klaar == 0) {
@@ -70,37 +70,37 @@ player.onChat("Doolhof2", function () {
         }
     }
 });
-player.onChat("Doolhof3", function () {
+player.onChat("level3", function () {
+    player.say(":)")
+    agent.setItem(POLISHED_GRANITE, 64, 1)
     agent.teleport(world(-84, 67, 224), NORTH)
-    agent.move(FORWARD, 2)
-    agent.turn(RIGHT_TURN)
-    agent.move(FORWARD, 3)
-    Klaar = 0
-    while (Klaar == 0) {
-        if (agent.detect(AgentDetection.Redstone, DOWN)) {
-            Klaar = 1
-            player.teleport(agent.getPosition())
-        }
+    agent.place(UP)
+    while (true) {
         agent.move(RIGHT, 1)
-        if (agent.detect(AgentDetection.Block, DOWN)) {
+        if (agent.detect(AgentDetection.Redstone, DOWN)) {
             agent.turn(RIGHT_TURN)
+            agent.place(UP)
         } else {
             agent.move(LEFT, 1)
             agent.move(FORWARD, 1)
-            if (!(agent.detect(AgentDetection.Block, DOWN))) {
+            if (agent.detect(AgentDetection.Redstone, DOWN)) {
+                agent.place(UP)
+            } else {
                 agent.move(BACK, 1)
                 agent.move(LEFT, 1)
-                if (agent.detect(AgentDetection.Block, DOWN)) {
+                if (agent.detect(AgentDetection.Redstone, DOWN)) {
                     agent.turn(LEFT_TURN)
+                    agent.place(UP)
                 } else {
                     agent.move(RIGHT, 1)
                     agent.turn(LEFT_TURN)
                     agent.turn(LEFT_TURN)
+                    agent.move(FORWARD, 1)
                 }
             }
         }
     }
-});
+})
 ```
 
 ## Level 1
