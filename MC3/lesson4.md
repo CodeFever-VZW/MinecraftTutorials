@@ -109,14 +109,8 @@ Kijk op het [leerplatform](https://leerplatform.codefever.be/) voor meer uitleg.
 
 ![Gesloten arena](https://codefeverpublic.blob.core.windows.net/public-content/images/2f009506689aa1024161faa11549e82c3b81ffc1c2c5d0d770a15e74260ed62e.png)
 
-## Uitgang
+## Uitgang (Extra)
 
 Kijk op het [leerplatform](https://leerplatform.codefever.be/) voor meer uitleg.
 
 ![Uitgang](https://codefeverpublic.blob.core.windows.net/public-content/images/662d69c23abe031d6e089378da7c45ace73c03e8fea5ee2658b930d50f1bfcfb.png)
-
-## Snake
-
-Kijk op het [leerplatform](https://leerplatform.codefever.be/) voor meer uitleg.
-
-![Snake](https://codefeverpublic.blob.core.windows.net/public-content/images/dcfb9bc70224ed467264f31549402295b0aef824ed09e6268af9e4b51d5a6ffd.png)
