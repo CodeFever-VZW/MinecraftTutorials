@@ -6,13 +6,9 @@ player.onChat("stop", function () {
     Klaar = 1;
 });
 player.onChat("level1", function () {
+    player.say(":)")
     agent.teleport(world(-86, 66, 325), NORTH)
-    Klaar = 0
-    while (Klaar == 0) {
-        if (agent.detect(AgentDetection.Redstone, DOWN)) {
-            Klaar = 1
-            player.teleport(agent.getPosition())
-        }
+    while (!(agent.detect(AgentDetection.Redstone, DOWN))) {
         if (!(agent.detect(AgentDetection.Block, RIGHT))) {
             agent.turn(RIGHT_TURN)
             agent.move(FORWARD, 1)
@@ -28,32 +24,28 @@ player.onChat("level1", function () {
     }
 })
 player.onChat("level2", function () {
+    player.say(":)")
     agent.teleport(world(-85, 66, 285), NORTH)
-    Klaar = 0
-    while (Klaar == 0) {
-        agent.setItem(TORCH, 10, 1)
-        if (agent.detect(AgentDetection.Redstone, DOWN)) {
-            Klaar = 1
-            player.teleport(agent.getPosition())
-        }
+    drukplaten = 0
+    while (drukplaten < 3) {
         if (!(agent.detect(AgentDetection.Block, RIGHT))) {
-            agent.setSlot(1)
-            agent.place(DOWN)
             agent.turn(RIGHT_TURN)
             agent.move(FORWARD, 1)
         } else if (!(agent.detect(AgentDetection.Block, FORWARD))) {
             agent.move(FORWARD, 1)
         } else if (!(agent.detect(AgentDetection.Block, LEFT))) {
-            agent.setSlot(1)
-            agent.place(DOWN)
             agent.turn(LEFT_TURN)
             agent.move(FORWARD, 1)
         } else {
             agent.turn(RIGHT_TURN)
             agent.turn(RIGHT_TURN)
+            agent.move(FORWARD, 1)
+        }
+        if (agent.detect(AgentDetection.Redstone, DOWN)) {
+            drukplaten += 1
         }
     }
-});
+})
 function plaatsBrugBlok () {
     if (!(agent.detect(AgentDetection.Block, UP))) {
         agent.place(UP)
