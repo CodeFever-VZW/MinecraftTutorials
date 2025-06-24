@@ -44,6 +44,7 @@ player.onChat("level2", function () {
     }
 })
 function plaatsBrugBlok () {
+    agent.setItem(POLISHED_GRANITE, 64, 1)
     if (!(agent.detect(AgentDetection.Block, UP))) {
         agent.place(UP)
     }
@@ -51,7 +52,6 @@ function plaatsBrugBlok () {
 player.onChat("level3", function () {
     player.say(":)")
     Klaar = 0
-    agent.setItem(POLISHED_GRANITE, 64, 1)
     agent.teleport(world(-84, 67, 224), NORTH)
     plaatsBrugBlok()
     while (Klaar == 0) {
