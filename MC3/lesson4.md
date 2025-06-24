@@ -1,7 +1,7 @@
 # MC Reeks 3 Les 4
 
 ```template
-function zetVariabeleKlaar(){
+function zetVariabelenKlaar(){
     let startX = 55;
     let startY = 70;
     let startZ = 0;
@@ -13,7 +13,7 @@ function tribune4(){};
 function snakePit(){};
 
 player.onChat("tribune", function () {
-    zetVariabeleKlaar();
+    zetVariabelenKlaar();
     snakePit();
     tribune1();
     tribune2();
