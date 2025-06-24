@@ -13,13 +13,13 @@ function tribune4(){};
 function snakePit(){};
 
 player.onChat("tribune", function () {
-    start();
+    zetVariabeleKlaar();
     snakePit();
     tribune1();
     tribune2();
     tribune3();
     tribune4();
-    player.say("Klaar met bouwen!);
+    player.say("Klaar met bouwen!");
 });
 ```
 
