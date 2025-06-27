@@ -83,6 +83,6 @@ Kijk op het [leerplatform](https://leerplatform.codefever.be/) voor meer uitleg.
 
 ## Level 2
 
-Programmeer de bouwer om de 20 goudblokken te vinden.
+Pas je code aan zodat de builder over het hele vrierkant gaat werken.
 
 Kijk op het [leerplatform](https://leerplatform.codefever.be/) voor meer uitleg.
