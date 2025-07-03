@@ -123,7 +123,7 @@ Alle uitleg die je nodig hebt kan je vinden op het [leerplatform](https://leerpl
 
 ## Extra: Gouden win!
 
-Pas je code aan zodanig dat de blokken die de winnende OXO overmen goud blokken worden.
+Pas je code aan zodanig dat de blokken die de winnende OXO vormen goud blokken worden.
 
 voorbeeld: (-- insert foto here --)
 
