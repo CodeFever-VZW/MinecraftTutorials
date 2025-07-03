@@ -52,7 +52,7 @@ function plaatsBrugBlok () {
 player.onChat("level3", function () {
     player.say(":)")
     Klaar = 0
-    agent.teleport(world(-84, 67, 224), NORTH)
+    agent.teleport(world(0, 0, 0), NORTH)
     plaatsBrugBlok()
     while (Klaar == 0) {
         agent.move(RIGHT, 1)
@@ -61,22 +61,7 @@ player.onChat("level3", function () {
             plaatsBrugBlok()
         } else {
             agent.move(LEFT, 1)
-            agent.move(FORWARD, 1)
-            if (agent.detect(AgentDetection.Redstone, DOWN)) {
-                plaatsBrugBlok()
-            } else {
-                agent.move(BACK, 1)
-                agent.move(LEFT, 1)
-                if (agent.detect(AgentDetection.Redstone, DOWN)) {
-                    agent.turn(LEFT_TURN)
-                    plaatsBrugBlok()
-                } else {
-                    agent.move(RIGHT, 1)
-                    agent.turn(LEFT_TURN)
-                    agent.turn(LEFT_TURN)
-                    agent.move(FORWARD, 1)
-                }
-            }
+            agent.turn(LEFT_TURN)
         }
     }
 })
