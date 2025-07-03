@@ -78,7 +78,7 @@ function plaatsBrugBlok () {
 player.onChat("level3", function () {
     player.say(":)")
     Klaar = 0
-    agent.teleport(world(0, 0, 0), NORTH)
+    agent.teleport(world(-84, 67, 224), NORTH)
     plaatsBrugBlok()
     while (Klaar == 0) {
         agent.move(RIGHT, 1)
