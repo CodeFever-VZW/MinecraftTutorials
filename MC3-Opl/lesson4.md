@@ -1,32 +1,6 @@
 # MC Reeks 3 Les 4
 
 ```template
-let startX = 0;
-let startY = 0;
-let startZ = 0;
-function zetVariabelenKlaar(){
-    startX = 55;
-    startY = 70;
-    startZ = 0;
-};
-function tribune1(){};
-function tribune2(){};
-function tribune3(){};
-function tribune4(){};
-function speelveld(){};
-
-player.onChat("tribune", function () {
-    zetVariabelenKlaar();
-    speelveld();
-    tribune1();
-    tribune2();
-    tribune3();
-    tribune4();
-    player.say("Klaar met bouwen!");
-});
-```
-
-```block
 let startX = 0
 let startY = 0
 let startZ = 0
@@ -41,21 +15,53 @@ function tribune3 () {
     }
 }
 function tribune4 () {
-    for (let index = 0; index <= 10; index++) {
+    for (let index2 = 0; index2 <= 10; index2++) {
         blocks.fill(
         POLISHED_GRANITE,
-        world(startX + -5, startY + index, startZ - (5 + index)),
-        world(startX + 35, startY + index, startZ - 15),
+        world(startX + -5, startY + index2, startZ - (5 + index2)),
+        world(startX + 35, startY + index2, startZ - 15),
+        FillOperation.Replace
+        )
+    }
+}
+function hoek1 () {
+    blocks.fill(
+    POLISHED_GRANITE,
+    world(startX - 5, startY + 0, startZ - 5),
+    world(startX - 15, startY + 10, startZ - 15),
+    FillOperation.Replace
+    )
+    for (let index4 = 0; index4 <= 10; index4++) {
+        blocks.fill(
+        AIR,
+        world(startX - 5, startY + (11 - index4), startZ - 5),
+        world(startX - (15 - index4), startY + (11 - index4), startZ - (15 - index4)),
         FillOperation.Replace
         )
     }
 }
 function tribune2 () {
-    for (let index = 0; index <= 10; index++) {
+    for (let index3 = 0; index3 <= 10; index3++) {
         blocks.fill(
         POLISHED_GRANITE,
-        world(startX + (35 + index), startY + index, startZ - 5),
-        world(startX + 45, startY + index, startZ + 35),
+        world(startX + (35 + index3), startY + index3, startZ - 5),
+        world(startX + 45, startY + index3, startZ + 35),
+        FillOperation.Replace
+        )
+    }
+}
+function hoek2 () {
+    blocks.fill(
+    POLISHED_GRANITE,
+    world(startX - 5, startY + 0, startZ + 35),
+    world(startX - 15, startY + 10, startZ + 45),
+    FillOperation.Replace
+    )
+    for (let index4 = 0; index4 <= 10; index4++) {
+        blocks.fill(
+        AIR,
+        world(startX - 5, startY + (11 - index4), startZ + 35),
+        world(startX - (15 - index4), startY + (11 - index4), startZ + (45 - index4)),
         FillOperation.Replace
         )
     }
@@ -67,8 +73,37 @@ player.onChat("tribune", function () {
     tribune2()
     tribune3()
     tribune4()
+    hoek1()
+    hoek2()
+    hoek3()
+    hoek4()
+    ingang()
     player.say("Klaar met bouwen!")
 })
+function hoek4 () {
+    blocks.fill(
+    POLISHED_GRANITE,
+    world(startX + 35, startY + 0, startZ - 5),
+    world(startX + 45, startY + 10, startZ - 15),
+    FillOperation.Replace
+    )
+    for (let index4 = 0; index4 <= 10; index4++) {
+        blocks.fill(
+        AIR,
+        world(startX + 35, startY + (11 - index4), startZ - 5),
+        world(startX + (45 - index4), startY + (11 - index4), startZ - (15 - index4)),
+        FillOperation.Replace
+        )
+    }
+}
+function ingang () {
+    blocks.fill(
+    AIR,
+    world(startX + -5, startY + 0, startZ + 14),
+    world(startX + -15, startY + 2, startZ + 16),
+    FillOperation.Replace
+    )
+}
 function speelveld () {
     blocks.fill(
     COBBLESTONE,
@@ -89,11 +124,27 @@ function zetVariabelenKlaar () {
     startZ = 0
 }
 function tribune1 () {
-    for (let index = 0; index <= 10; index++) {
+    for (let index4 = 0; index4 <= 10; index4++) {
         blocks.fill(
         POLISHED_GRANITE,
-        world(startX - (5 + index), startY + index, startZ - 5),
-        world(startX - 15, startY + index, startZ + 35),
+        world(startX - (5 + index4), startY + index4, startZ - 5),
+        world(startX - 15, startY + index4, startZ + 35),
+        FillOperation.Replace
+        )
+    }
+}
+function hoek3 () {
+    blocks.fill(
+    POLISHED_GRANITE,
+    world(startX + 35, startY + 0, startZ + 35),
+    world(startX + 45, startY + 10, startZ + 45),
+    FillOperation.Replace
+    )
+    for (let index4 = 0; index4 <= 10; index4++) {
+        blocks.fill(
+        AIR,
+        world(startX + 35, startY + (11 - index4), startZ + 35),
+        world(startX + (45 - index4), startY + (11 - index4), startZ + (45 - index4)),
         FillOperation.Replace
         )
     }
