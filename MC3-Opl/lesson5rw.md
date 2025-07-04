@@ -100,6 +100,27 @@ player.onChat("level4", function () {
     }
 })
 
+// level 5
+player.onChat("level5", function () {
+    positie = world(-10, -57, 99)
+    player.say(":)")
+    for (let breete = 0; breete <= 2; breete++) {
+        for (let lengte2 = 0; lengte2 <= 2; lengte2++) {
+            for (let x3 = 0; x3 <= 4; x3++) {
+                for (let z4 = 0; z4 <= 4; z4++) {
+                    currentPos = positions.add(
+                    positie,
+                    world(x3 + breete * 8, 0, z4 + lengte2 * 8)
+                    )
+                    if (!(blocks.testForBlock(EMERALD_BLOCK, currentPos))) {
+                        blocks.place(AIR, currentPos)
+                    }
+                }
+            }
+        }
+    }
+})
+
 
 ```
 
