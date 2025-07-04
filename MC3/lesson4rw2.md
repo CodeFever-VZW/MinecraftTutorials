@@ -24,7 +24,7 @@ blocks.onBlockPlaced(RED_WOOL, function () {
 })
 
 blocks.onBlockPlaced(BLUE_WOOL, function () {
-    player.say("rood");
+    player.say("blauw");
 })
 ```
 
