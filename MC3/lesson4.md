@@ -1,41 +1,72 @@
 # MC Reeks 3 Les 4
 
 ```template
-let startX = 0;
-let startY = 0;
-let startZ = 0;
-function zetVariabelenKlaar(){
-    startX = 55;
-    startY = 70;
-    startZ = 0;
-};
-function tribune1(){};
-function tribune2(){};
-function tribune3(){};
-function tribune4(){};
-function speelveld(){};
-
-player.onChat("tribune", function () {
-    zetVariabelenKlaar();
-    speelveld();
-    tribune1();
-    tribune2();
-    tribune3();
-    tribune4();
-    player.say("Klaar met bouwen!");
-});
+let startX = 0
+let startY = 0
+let startZ = 0
+function tribune3 () {}
+function tribune4 () {}
+function tribune2 () {}
+function tribune1 () {}
+function zetKlaar () {
+    startX = 55
+    startY = 70
+    startZ = 0
+    mobs.kill(
+    mobs.target(ALL_ENTITIES)
+    )
+    gameplay.setWeather(CLEAR)
+}
+player.onChat("arena", function () {
+    zetKlaar()
+    tribune1()
+    tribune2()
+    tribune3()
+    tribune4()
+    uitgang()
+    publiek()
+    player.say("Klaar met bouwen!")
+})
 ```
 
 ```block
 let startX = 0
 let startY = 0
 let startZ = 0
+function tribune3_2 () {
+    for (let index = 0; index <= 10; index++) {
+        blocks.fill(
+        GRANITE,
+        world(startX - 15, startY + index, 0 - 5 - index),
+        world(startX + 45, startY + index, startZ - 15),
+        FillOperation.Replace
+        )
+    }
+}
+function publiek () {
+    for (let index = 0; index <= 50; index++) {
+        mobs.spawn(VILLAGER, randpos(
+        world(startX - 15, startY + 10, startZ - 15),
+        world(startX + 45, startY + 10, startZ + 45)
+        ))
+    }
+}
+function tribune2_2 () {
+    for (let index = 0; index <= 10; index++) {
+        blocks.fill(
+        GRANITE,
+        world(startX + 35 + index, startY + index, startZ + 45),
+        world(startX + 45, startY + index, startZ - 15),
+        FillOperation.Replace
+        )
+    }
+}
 function tribune3 () {
     for (let index = 0; index <= 10; index++) {
         blocks.fill(
-        POLISHED_GRANITE,
-        world(startX + -5, startY + index, startZ + (35 + index)),
-        world(startX + 35, startY + index, startZ + 45),
+        GRANITE,
+        world(startX - 5, startY + index, 0 - 5 - index),
+        world(startX + 35, startY + index, startZ - 15),
         FillOperation.Replace
         )
     }
@@ -43,9 +74,19 @@ function tribune3 () {
 function tribune4 () {
     for (let index = 0; index <= 10; index++) {
         blocks.fill(
-        POLISHED_GRANITE,
-        world(startX + -5, startY + index, startZ - (5 + index)),
-        world(startX + 35, startY + index, startZ - 15),
+        GRANITE,
+        world(startX + 35, startY + index, startZ + 35 + index),
+        world(startX - 5, startY + index, startZ + 45),
+        FillOperation.Replace
+        )
+    }
+}
+function tribune1_2 () {
+    for (let index = 0; index <= 10; index++) {
+        blocks.fill(
+        GRANITE,
+        world(startX - 5 - index, startY + index, startZ - 15),
+        world(startX - 15, startY + index, startZ + 45),
         FillOperation.Replace
         )
     }
@@ -53,51 +94,67 @@ function tribune4 () {
 function tribune2 () {
     for (let index = 0; index <= 10; index++) {
         blocks.fill(
-        POLISHED_GRANITE,
-        world(startX + (35 + index), startY + index, startZ - 5),
-        world(startX + 45, startY + index, startZ + 35),
+        GRANITE,
+        world(startX + 35 + index, startY + index, startZ + 35),
+        world(startX + 45, startY + index, startZ - 5),
         FillOperation.Replace
         )
     }
 }
-player.onChat("tribune", function () {
-    zetVariabelenKlaar()
-    speelveld()
-    tribune1()
-    tribune2()
-    tribune3()
-    tribune4()
-    player.say("Klaar met bouwen!")
-})
-function speelveld () {
-    blocks.fill(
-    COBBLESTONE,
-    world(startX + 0, startY + 0, startZ + 0),
-    world(startX + 30, startY + 1, startZ + 30),
-    FillOperation.Replace
-    )
+function uitgang () {
     blocks.fill(
     AIR,
-    world(startX + 1, startY + 1, startZ + 1),
-    world(startX + 29, startY + 1, startZ + 29),
+    world(startX - 5, startY, startZ + 14),
+    world(startX - 15, startY + 2, startZ + 16),
     FillOperation.Replace
     )
 }
-function zetVariabelenKlaar () {
-    startX = 55
-    startY = 70
-    startZ = 0
+player.onChat("arena2", function () {
+    zetKlaar()
+    tribune1_2()
+    tribune2_2()
+    tribune3_2()
+    tribune4_2()
+    uitgang()
+    publiek()
+    player.say("Klaar met bouwen!")
+})
+function tribune4_2 () {
+    for (let index = 0; index <= 10; index++) {
+        blocks.fill(
+        GRANITE,
+        world(startX + 45, startY + index, startZ + 35 + index),
+        world(startX - 15, startY + index, startZ + 45),
+        FillOperation.Replace
+        )
+    }
 }
 function tribune1 () {
     for (let index = 0; index <= 10; index++) {
         blocks.fill(
-        POLISHED_GRANITE,
-        world(startX - (5 + index), startY + index, startZ - 5),
+        GRANITE,
+        world(startX - 5 - index, startY + index, startZ - 5),
         world(startX - 15, startY + index, startZ + 35),
         FillOperation.Replace
         )
     }
 }
+function zetKlaar () {
+    startX = 55
+    startY = 70
+    startZ = 0
+    mobs.kill(
+    mobs.target(ALL_ENTITIES)
+    )
+    gameplay.setWeather(CLEAR)
+}
+player.onChat("arena", function () {
+    zetKlaar()
+    tribune1()
+    tribune2()
+    tribune3()
+    tribune4()
+})
 
 ```
 

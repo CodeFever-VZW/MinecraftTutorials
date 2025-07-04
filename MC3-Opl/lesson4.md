@@ -4,151 +4,128 @@
 let startX = 0
 let startY = 0
 let startZ = 0
+function tribune3_2 () {
+    for (let index = 0; index <= 10; index++) {
+        blocks.fill(
+        GRANITE,
+        world(startX - 15, startY + index, 0 - 5 - index),
+        world(startX + 45, startY + index, startZ - 15),
+        FillOperation.Replace
+        )
+    }
+}
+function publiek () {
+    for (let index = 0; index <= 50; index++) {
+        mobs.spawn(VILLAGER, randpos(
+        world(startX - 15, startY + 10, startZ - 15),
+        world(startX + 45, startY + 10, startZ + 45)
+        ))
+    }
+}
+function tribune2_2 () {
+    for (let index = 0; index <= 10; index++) {
+        blocks.fill(
+        GRANITE,
+        world(startX + 35 + index, startY + index, startZ + 45),
+        world(startX + 45, startY + index, startZ - 15),
+        FillOperation.Replace
+        )
+    }
+}
 function tribune3 () {
     for (let index = 0; index <= 10; index++) {
         blocks.fill(
-        POLISHED_GRANITE,
-        world(startX + -5, startY + index, startZ + (35 + index)),
-        world(startX + 35, startY + index, startZ + 45),
+        GRANITE,
+        world(startX - 5, startY + index, 0 - 5 - index),
+        world(startX + 35, startY + index, startZ - 15),
         FillOperation.Replace
         )
     }
 }
 function tribune4 () {
-    for (let index2 = 0; index2 <= 10; index2++) {
+    for (let index = 0; index <= 10; index++) {
         blocks.fill(
-        POLISHED_GRANITE,
-        world(startX + -5, startY + index2, startZ - (5 + index2)),
-        world(startX + 35, startY + index2, startZ - 15),
+        GRANITE,
+        world(startX + 35, startY + index, startZ + 35 + index),
+        world(startX - 5, startY + index, startZ + 45),
         FillOperation.Replace
         )
     }
 }
-function hoek1 () {
-    blocks.fill(
-    POLISHED_GRANITE,
-    world(startX - 5, startY + 0, startZ - 5),
-    world(startX - 15, startY + 10, startZ - 15),
-    FillOperation.Replace
-    )
-    for (let index4 = 0; index4 <= 10; index4++) {
+function tribune1_2 () {
+    for (let index = 0; index <= 10; index++) {
         blocks.fill(
-        AIR,
-        world(startX - 5, startY + (11 - index4), startZ - 5),
-        world(startX - (15 - index4), startY + (11 - index4), startZ - (15 - index4)),
+        GRANITE,
+        world(startX - 5 - index, startY + index, startZ - 15),
+        world(startX - 15, startY + index, startZ + 45),
         FillOperation.Replace
         )
     }
 }
 function tribune2 () {
-    for (let index3 = 0; index3 <= 10; index3++) {
+    for (let index = 0; index <= 10; index++) {
         blocks.fill(
-        POLISHED_GRANITE,
-        world(startX + (35 + index3), startY + index3, startZ - 5),
-        world(startX + 45, startY + index3, startZ + 35),
+        GRANITE,
+        world(startX + 35 + index, startY + index, startZ + 35),
+        world(startX + 45, startY + index, startZ - 5),
         FillOperation.Replace
         )
     }
 }
-function hoek2 () {
+function uitgang () {
     blocks.fill(
-    POLISHED_GRANITE,
-    world(startX - 5, startY + 0, startZ + 35),
-    world(startX - 15, startY + 10, startZ + 45),
+    AIR,
+    world(startX - 5, startY, startZ + 14),
+    world(startX - 15, startY + 2, startZ + 16),
     FillOperation.Replace
     )
-    for (let index4 = 0; index4 <= 10; index4++) {
+}
+player.onChat("arena2", function () {
+    zetKlaar()
+    tribune1_2()
+    tribune2_2()
+    tribune3_2()
+    tribune4_2()
+    uitgang()
+    publiek()
+    player.say("Klaar met bouwen!")
+})
+function tribune4_2 () {
+    for (let index = 0; index <= 10; index++) {
         blocks.fill(
-        AIR,
-        world(startX - 5, startY + (11 - index4), startZ + 35),
-        world(startX - (15 - index4), startY + (11 - index4), startZ + (45 - index4)),
+        GRANITE,
+        world(startX + 45, startY + index, startZ + 35 + index),
+        world(startX - 15, startY + index, startZ + 45),
         FillOperation.Replace
         )
     }
 }
-player.onChat("tribune", function () {
-    zetVariabelenKlaar()
-    speelveld()
+function tribune1 () {
+    for (let index = 0; index <= 10; index++) {
+        blocks.fill(
+        GRANITE,
+        world(startX - 5 - index, startY + index, startZ - 5),
+        world(startX - 15, startY + index, startZ + 35),
+        FillOperation.Replace
+        )
+    }
+}
+function zetKlaar () {
+    startX = 55
+    startY = 70
+    startZ = 0
+    mobs.kill(
+    mobs.target(ALL_ENTITIES)
+    )
+    gameplay.setWeather(CLEAR)
+}
+player.onChat("arena", function () {
+    zetKlaar()
     tribune1()
     tribune2()
     tribune3()
     tribune4()
-    hoek1()
-    hoek2()
-    hoek3()
-    hoek4()
-    ingang()
-    player.say("Klaar met bouwen!")
 })
-function hoek4 () {
-    blocks.fill(
-    POLISHED_GRANITE,
-    world(startX + 35, startY + 0, startZ - 5),
-    world(startX + 45, startY + 10, startZ - 15),
-    FillOperation.Replace
-    )
-    for (let index4 = 0; index4 <= 10; index4++) {
-        blocks.fill(
-        AIR,
-        world(startX + 35, startY + (11 - index4), startZ - 5),
-        world(startX + (45 - index4), startY + (11 - index4), startZ - (15 - index4)),
-        FillOperation.Replace
-        )
-    }
-}
-function ingang () {
-    blocks.fill(
-    AIR,
-    world(startX + -5, startY + 0, startZ + 14),
-    world(startX + -15, startY + 2, startZ + 16),
-    FillOperation.Replace
-    )
-}
-function speelveld () {
-    blocks.fill(
-    COBBLESTONE,
-    world(startX + 0, startY + 0, startZ + 0),
-    world(startX + 30, startY + 1, startZ + 30),
-    FillOperation.Replace
-    )
-    blocks.fill(
-    AIR,
-    world(startX + 1, startY + 1, startZ + 1),
-    world(startX + 29, startY + 1, startZ + 29),
-    FillOperation.Replace
-    )
-}
-function zetVariabelenKlaar () {
-    startX = 55
-    startY = 70
-    startZ = 0
-}
-function tribune1 () {
-    for (let index4 = 0; index4 <= 10; index4++) {
-        blocks.fill(
-        POLISHED_GRANITE,
-        world(startX - (5 + index4), startY + index4, startZ - 5),
-        world(startX - 15, startY + index4, startZ + 35),
-        FillOperation.Replace
-        )
-    }
-}
-function hoek3 () {
-    blocks.fill(
-    POLISHED_GRANITE,
-    world(startX + 35, startY + 0, startZ + 35),
-    world(startX + 45, startY + 10, startZ + 45),
-    FillOperation.Replace
-    )
-    for (let index4 = 0; index4 <= 10; index4++) {
-        blocks.fill(
-        AIR,
-        world(startX + 35, startY + (11 - index4), startZ + 35),
-        world(startX + (45 - index4), startY + (11 - index4), startZ + (45 - index4)),
-        FillOperation.Replace
-        )
-    }
-}
 
 ```
 
