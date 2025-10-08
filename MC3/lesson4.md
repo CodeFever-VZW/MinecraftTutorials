@@ -8,6 +8,8 @@ function tribune3 () {}
 function tribune4 () {}
 function tribune2 () {}
 function tribune1 () {}
+function uitgang () {}
+function publiek () {}
 function zetKlaar () {
     startX = 55
     startY = 70
