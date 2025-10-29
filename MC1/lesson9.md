@@ -1,6 +1,10 @@
 # MC Reeks 1 Les 5
 
 ```template
+player.onChat("spleef", function () {});
+player.onChat("tntrun", function () {});
+player.onChat("shootout", function () {});
+
 // deze code moet je niet aan komen!
 function startTntRun () {
     player.execute(
