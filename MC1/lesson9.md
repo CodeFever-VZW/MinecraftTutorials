@@ -52,6 +52,7 @@ function startShootOut () {
 
 ```block
 let hoogte = 0
+// deze code zorgt er voor de dat tnt niet aan gaat in het begin, en dan na 5 seconden wel
 function startTntRun () {
     player.execute(
     "clear @a"
@@ -72,6 +73,7 @@ function startTntRun () {
     "gamerule tntexplodes true"
     )
 }
+//maak de spleef arena
 player.onChat("spleef", function () {
     hoogte = 0
     for (let index = 0; index < 10; index++) {
@@ -98,6 +100,7 @@ player.onChat("spleef", function () {
     1
     )
 })
+//maak de tnt run arena
 player.onChat("tntrun", function () {
     hoogte = 0
     shapes.circle(
@@ -134,6 +137,7 @@ player.onChat("tntrun", function () {
     player.teleport(pos(0, 10, 0))
     startTntRun()
 })
+//maak de schoot out arena
 player.onChat("shootout", function () {
     blocks.fill(
     LIGHT_GRAY_CONCRETE,
@@ -159,6 +163,8 @@ player.onChat("shootout", function () {
     )
     startShootOut()
 })
+// deze code zorgt er voor de dat pvp niet aan gaat in het begin, en dan na 5 seconden wel
+// het stuurt ook een event naar de datapack dat dan de spelers teleporteert naar de juiste plek
 function startShootOut () {
     player.execute(
     "/scriptevent codefever:start-shoot-out " + "{" + ("\"x\":" + player.position().getValue(Axis.X) + ",") + ("\"y\":" + player.position().getValue(Axis.Y) + ",") + ("\"z\":" + player.position().getValue(Axis.Z)) + "}"
