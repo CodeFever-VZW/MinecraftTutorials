@@ -74,58 +74,47 @@ player.onChat("afsluiting", function () {
 
 ```
 
-## Rups
+## Bomen
 
-Kijk op het [leerplatform](https://leerplatform.codefever.be/) hoe je een rups maakt.
+Kijk op het [leerplatform](https://leerplatform.codefever.be/) hoe je de bomen rij maakt.
 
 [Klik hier om naar het leerplatform te gaan](https://leerplatform.codefever.be/).
 
-![Rups](https://codefeverpublic.blob.core.windows.net/public-content/images/6d403f7a4b08ce078280874615075739ba056bf896fe900dfc5e858efbbb9bf1.png)
 
-## Torentje van goud
+## Goud toren
 
-Kijk op het [leerplatform](https://leerplatform.codefever.be/) hoe je een torentje van goud maakt.
+Kijk op het [leerplatform](https://leerplatform.codefever.be/) hoe je de goud toren.
 
-![Torentje van goud](https://codefeverpublic.blob.core.windows.net/public-content/images/5e5342e535df76c288005ae0b0da79a57b7a3c7c076b56413110e10ea1f4650f.png)
+[Klik hier om naar het leerplatform te gaan](https://leerplatform.codefever.be/).
 
-## Trap
+## Bank
 
-Kijk op het [leerplatform](https://leerplatform.codefever.be/) hoe je een trap maakt.
+Kijk op het [leerplatform](https://leerplatform.codefever.be/) hoe je de bank maakt.
 
-![Trap](https://codefeverpublic.blob.core.windows.net/public-content/images/88aa629f8d9778b632cec4cd53b7b5f6b8c5b22a87a9a8182824c05c53e50f72.png)
+[Klik hier om naar het leerplatform te gaan](https://leerplatform.codefever.be/).
 
-## Toren met lus
+## Hoge toren
 
-Kijk op het [leerplatform](https://leerplatform.codefever.be/) hoe je een trap maakt met behulp van lussen.
+Kijk op het [leerplatform](https://leerplatform.codefever.be/) hoe je de hoge toren maakt.
 
-![Toren](https://codefeverpublic.blob.core.windows.net/public-content/images/0db2bf14c73e3eb8e69d96f03a554c3c340be45fb45d92ccaa16274283a4dbf8.png)
+[Klik hier om naar het leerplatform te gaan](https://leerplatform.codefever.be/).
 
-## Haak
+## Afsluiting
 
-Kijk op het [leerplatform](https://leerplatform.codefever.be/) hoe je een haak maakt.
+Kijk op het [leerplatform](https://leerplatform.codefever.be/) hoe je de afsluiting maakt.
 
-![Haak](https://codefeverpublic.blob.core.windows.net/public-content/images/90e3a8a9754db98f546bea695b098b3721463ada131c13e5e2df9fbbacb6ff95.png)
+[Klik hier om naar het leerplatform te gaan](https://leerplatform.codefever.be/).
 
-## Vierkant
+## Serre
 
-Kijk op het [leerplatform](https://leerplatform.codefever.be/) hoe je een vierkant maakt.
+Kijk op het [leerplatform](https://leerplatform.codefever.be/) hoe je de serre.
 
-![Vierkant](https://codefeverpublic.blob.core.windows.net/public-content/images/19fa92227f6914d9a68a655415666f8756f49c02e772d4c136448a57380eff12.png)
+[Klik hier om naar het leerplatform te gaan](https://leerplatform.codefever.be/).
 
-## Glazen toren
 
-Kijk op het [leerplatform](https://leerplatform.codefever.be/) hoe je een glazen toren maakt.
 
-![Glazen toren](https://codefeverpublic.blob.core.windows.net/public-content/images/88c902207511d429dad83cc61929b311a4cb00be3fed7ef9cea9414e773109e6.png)
 
-## Klein duimpje 2.0
 
-Kijk op het [leerplatform](https://leerplatform.codefever.be/) hoe je klein duimpje 2.0 wordt.
 
-![Klein duimpje 2.0](https://codefeverpublic.blob.core.windows.net/public-content/images/30f2d8a617a79288cb66e02a0b1d4b7065dccddc2ccb2f30b95bbffabc26f1b1.png)
 
-## Extra opgaven
 
-Kijk op het [leerplatform](https://leerplatform.codefever.be/) voor de extra opgaven.
-
-![Extra opgaven](https://codefeverpublic.blob.core.windows.net/public-content/images/4d34ad7b95637fb1a65332c1d1f2227acce77f1a3b2a1fc5c570984f6ade763a.png)
