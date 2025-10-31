@@ -1,8 +1,40 @@
 # MC Reeks 1 Les 5
 
 ```template
-player.onChat("plaatslucifer", function () {})
-player.onChat("steekluciferaan", function () {})
+player.onChat("luciferAan", function (hoogte, x, z) {
+    steekLuciferAan(hoogte, x, z)
+})
+player.onChat("plaatsLucifer", function (hoogte, x, z) {
+    builder.teleportTo(world(x, 0, z))
+    if (hoogte < 3) {
+        hoogte = 3
+    }
+    for (let index = 0; index < hoogte - 1; index++) {
+        builder.place(PLANKS_BIRCH)
+        builder.move(UP, 1)
+    }
+    builder.place(TNT)
+})
+function steekLuciferAan (hoogteRedstone: number, xRedstone: number, zRedstone: number) {
+    loops.pause(100)
+    builder.teleportTo(world(xRedstone, hoogteRedstone, zRedstone))
+    builder.place(REDSTONE_BLOCK)
+}
+
+player.onChat("Knaltekst", function (Hoogte) {
+    blocks.print(
+    "BOEM",
+    TNT,
+    pos(0, Hoogte, 0),
+    WEST
+    )
+    tekstAansteken(Hoogte)
+})
+function tekstAansteken (hoogteTekst: number) {
+    builder.teleportTo(pos(0, hoogteTekst, 0))
+    builder.place(REDSTONE_BLOCK)
+}
+
 ```
 
 ```block

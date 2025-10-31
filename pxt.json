@@ -1,6 +1,6 @@
 {
     "name": "MinecraftTutorial",
-    "version": "0.7.7",
+    "version": "0.7.8",
     "description": "Minecraft tutorials for codefever",
     "license": "none",
     "dependencies": {
@@ -18,6 +18,7 @@
         "MC1-Opl/lesson2.md",
         "MC1-Opl/lesson3.md",
         "MC1-Opl/lesson4.md",
+        "MC1-Opl/lesson5.md",
         "MC1-Opl/lesson9.md",
 
         "MC2/lesson7.md",
