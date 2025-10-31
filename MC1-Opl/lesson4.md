@@ -1,9 +1,83 @@
 # MC Reeks 1 Les 4
 
 ```template
-player.onChat("floorIsLava", function () {})
-player.onChat("bouwDouche", function () {})
-player.onChat("bouwSpookhuis", function () {})
+player.onChat("floorIsLava", function () {
+    while (true) {
+        if (player.position().getValue(Axis.Y) <= 0) {
+            blocks.fill(
+            WATER,
+            world(-9, -1, -9),
+            world(9, -1, 9),
+            FillOperation.Replace
+            )
+        }
+        if (true) {
+            blocks.fill(
+            LAVA,
+            world(-9, -1, -9),
+            world(9, -1, 9),
+            FillOperation.Replace
+            )
+        }
+    }
+})
+
+player.onChat("bouwDouche", function () {
+    builder.teleportTo(world(10, -1, 10))
+    builder.place(DIAMOND_BLOCK)
+    builder.move(FORWARD, 1)
+    for (let index = 0; index < 5; index++) {
+        builder.move(UP, 1)
+        builder.place(STONE)
+    }
+    builder.move(BACK, 1)
+    builder.place(STONE)
+    while (true) {
+        if (blocks.testForBlock(DIAMOND_BLOCK, pos(0, -1, 0))) {
+            blocks.place(WATER, world(10, 5, 10))
+        } else {
+            blocks.place(AIR, world(10, 5, 10))
+        }
+    }
+})
+
+player.onChat("zones", function () {
+    blocks.fill(
+    GOLD_BLOCK,
+    pos(1, -1, 2),
+    pos(2, -1, 3),
+    FillOperation.Replace
+    )
+    blocks.fill(
+    DIAMOND_BLOCK,
+    pos(-1, -1, -2),
+    pos(-2, -1, -3),
+    FillOperation.Replace
+    )
+    while (true) {
+        if (blocks.testForBlock(GOLD_BLOCK, pos(0, -1, 0))) {
+            for (let index = 0; index < 20; index++) {
+                mobs.spawn(BAT, pos(0, 2, 0))
+            }
+        } else if (blocks.testForBlock(DIAMOND_BLOCK, pos(0, -1, 0))) {
+            blocks.fill(
+            LAVA,
+            pos(1, -1, 1),
+            pos(2, -1, 2),
+            FillOperation.Replace
+            )
+        }
+    }
+})
+
+player.onChat("bouwSpookhuis", function () {
+    blocks.fill(
+    MANGROVE_WOOD,
+    pos(10, -1, 10),
+    pos(20, 5, 20),
+    FillOperation.Hollow
+    )
+})
 ```
 
 ```block
