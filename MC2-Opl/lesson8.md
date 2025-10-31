@@ -26,6 +26,7 @@ mobs.onMobKilled(mobs.monster(CREEPER), function () {
 function level2 () {
     horde = 15
     spawnZombie(10)
+    spawnSpinnen(5)
 }
 function killAllMobs () {
     selector = mobs.target(ALL_ENTITIES)
