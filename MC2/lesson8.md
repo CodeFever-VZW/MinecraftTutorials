@@ -1,4 +1,4 @@
-# Minecraft 3 les 1
+# Minecraft 2 les 8
 
 ```template
 function startLevel () {
