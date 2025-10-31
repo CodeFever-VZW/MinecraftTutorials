@@ -165,6 +165,7 @@ player.onChat("shootout", function () {
 })
 // deze code zorgt er voor de dat pvp niet aan gaat in het begin, en dan na 5 seconden wel
 // het stuurt ook een event naar de datapack dat dan de spelers teleporteert naar de juiste plek
+// check het datapack voor meer info
 function startShootOut () {
     player.execute(
     "/scriptevent codefever:start-shoot-out " + "{" + ("\"x\":" + player.position().getValue(Axis.X) + ",") + ("\"y\":" + player.position().getValue(Axis.Y) + ",") + ("\"z\":" + player.position().getValue(Axis.Z)) + "}"
