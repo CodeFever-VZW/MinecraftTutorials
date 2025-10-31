@@ -16,9 +16,7 @@ function level1 () {
 player.onChat("horde", function () {
     level = 1
     gameplay.setDifficulty(EASY)
-    mobs.kill(
-    mobs.target(ALL_ENTITIES)
-    )
+    killAllMobs()
     startLevel()
 })
 
@@ -26,10 +24,13 @@ mobs.onMobKilled(mobs.monster(ZOMBIE), function () {
     horde += -1
     checkLevel()
 })
+
+
 ```
 
 ```blocks
 let horde = 0
+let selector: TargetSelector = null
 let level = 0
 function level4 () {
     horde = 20
@@ -53,15 +54,19 @@ mobs.onMobKilled(mobs.monster(CREEPER), function () {
 function level2 () {
     horde = 15
     spawnZombie(10)
-    spawnSpinnen(5)
+}
+function killAllMobs () {
+    selector = mobs.target(ALL_ENTITIES)
+    selector.addRule("type", "!player")
+    mobs.kill(
+    selector
+    )
 }
 player.onChat("horde", function () {
     level = 1
     gameplay.setDifficulty(EASY)
-    mobs.kill(
-    mobs.target(ALL_ENTITIES)
-    )
     startLevel()
+    killAllMobs()
 })
 function randomLocatie () {
     return randpos(
@@ -90,9 +95,7 @@ function spawnZombie (aantal: number) {
 }
 function checkLevel () {
     if (horde <= 0) {
-        mobs.kill(
-        mobs.target(ALL_ENTITIES)
-        )
+        killAllMobs()
         level += 1
         startLevel()
         player.say("Volgend level!")
@@ -117,7 +120,6 @@ function startLevel () {
     	
     }
 }
-
 
 ```
 
