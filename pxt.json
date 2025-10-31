@@ -1,6 +1,6 @@
 {
     "name": "MinecraftTutorial",
-    "version": "0.7.3",
+    "version": "0.7.4",
     "description": "Minecraft tutorials for codefever",
     "license": "none",
     "dependencies": {
