@@ -1,10 +1,71 @@
 # MC Reeks 1 Les 3
 
 ```template
-player.onChat("zone3", function () {});
-player.onChat("zone2", function () {});
-player.onChat("zone1", function () {});
-player.onChat("zone4", function () {});
+player.onChat("zone3", function () {
+    blocks.fill(
+    REDSTONE_BLOCK,
+    world(13, -1, -79),
+    world(10, -1, -82),
+    FillOperation.Replace
+    )
+})
+player.onChat("zone2", function () {
+    blocks.fill(
+    REDSTONE_BLOCK,
+    world(13, -1, -85),
+    world(10, -1, -85),
+    FillOperation.Replace
+    )
+})
+player.onChat("zone1", function () {
+    blocks.fill(
+    REDSTONE_BLOCK,
+    world(11, -1, -89),
+    world(11, -1, -94),
+    FillOperation.Replace
+    )
+})
+player.onChat("zone4", function () {
+    blocks.fill(
+    REDSTONE_BLOCK,
+    world(12, -1, -74),
+    world(11, -1, -77),
+    FillOperation.Replace
+    )
+})
+
+player.onChat("bouwHuis", function () {
+    blocks.fill(
+    ORANGE_TERRACOTTA,
+    world(-24, -1, 10),
+    world(-35, 7, 0),
+    FillOperation.Hollow
+    )
+    blocks.fill(
+    GLASS,
+    world(-29, 2, 0),
+    world(-33, 4, 0),
+    FillOperation.Replace
+    )
+    blocks.fill(
+    AIR,
+    world(-25, 0, 0),
+    world(-27, 3, 0),
+    FillOperation.Replace
+    )
+    blocks.fill(
+    PURPLE_TERRACOTTA,
+    world(-23, 7, 11),
+    world(-36, 7, -1),
+    FillOperation.Replace
+    )
+    blocks.fill(
+    PURPLE_TERRACOTTA,
+    world(-24, 8, 10),
+    world(-35, 8, 0),
+    FillOperation.Replace
+    )
+})
 ```
 
 ```block
