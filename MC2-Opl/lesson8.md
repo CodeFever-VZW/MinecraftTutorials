@@ -37,8 +37,8 @@ function killAllMobs () {
 player.onChat("horde", function () {
     level = 1
     gameplay.setDifficulty(EASY)
-    startLevel()
     killAllMobs()
+    startLevel()
 })
 function randomLocatie () {
     return randpos(
