@@ -10,8 +10,7 @@ player.onChat("floorIsLava", function () {
             world(9, -1, 9),
             FillOperation.Replace
             )
-        }
-        if (true) {
+        } else {
             blocks.fill(
             LAVA,
             world(-9, -1, -9),
@@ -90,8 +89,7 @@ player.onChat("floorIsLava", function () {
             world(9, -1, 9),
             FillOperation.Replace
             )
-        }
-        if (true) {
+        } else {
             blocks.fill(
             LAVA,
             world(-9, -1, -9),
@@ -101,7 +99,6 @@ player.onChat("floorIsLava", function () {
         }
     }
 })
-
 player.onChat("bouwDouche", function () {
     builder.teleportTo(world(10, -1, 10))
     builder.place(DIAMOND_BLOCK)

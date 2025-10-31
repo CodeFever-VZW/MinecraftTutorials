@@ -16,8 +16,7 @@ player.onChat("floorIsLava", function () {
             world(9, -1, 9),
             FillOperation.Replace
             )
-        }
-        if (true) {
+        } else {
             blocks.fill(
             LAVA,
             world(-9, -1, -9),
