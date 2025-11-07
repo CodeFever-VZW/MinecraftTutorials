@@ -25,6 +25,14 @@ mobs.onMobKilled(mobs.monster(ZOMBIE), function () {
     checkLevel()
 })
 
+function killAllMobs () {
+    selector = mobs.target(ALL_ENTITIES)
+    selector.addRule("type", "!player")
+    mobs.kill(
+    selector
+    )
+}
+
 
 ```
 
