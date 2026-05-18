@@ -10,4 +10,4 @@ player.onChat("level1", function () {});
 
 ## Geen opdracht
 
-spreek met Bilal om de opdracht te starten.
+Je moet nog niets programmeren!

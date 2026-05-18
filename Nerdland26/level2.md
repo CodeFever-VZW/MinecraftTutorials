@@ -17,9 +17,9 @@ player.onChat("start", function () {
 agent.turn(LEFT_TURN)
 ```
 
-## Level 1
+## level 2
 
-Programmeer de agent om van het gouden blok tot het emerald (lichtgroene) blok te gaan. Je kan zelf kiezen hoe je dit doet. De agent zal automatisch een lijn trekken op de blokken waar hij over gaat.
+Net zoals bij de vorige opdracht moet je de agent van het gouden blok tot het emerald (lichtgroene) blok laten gaan. Je mag terug kiezen hoe je dit doet. De agent zal automatisch een lijn trekken op de blokken waar hij over gaat. 
 
 De Agent kan enkel een lijn trekken op de donker groene blokken.
 
