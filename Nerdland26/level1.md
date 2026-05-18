@@ -2,7 +2,7 @@
 
 ```template
 player.onChat("start", function () {
-    
+    agent.teleport(world(-25, -60, 40), SOUTH)
 })
 ```
 

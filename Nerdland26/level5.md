@@ -2,13 +2,13 @@
 
 ```template
 player.onChat("start", function () {
-    
+    agent.teleport(world(64, -60, 76), SOUTH)
 })
 ```
 
 ```block
 player.onChat("start", function () {
-    agent.teleport(world(-25, -60, 40), SOUTH)
+    agent.teleport(world(64, -60, 76), SOUTH)
     for (let index = 0; index < 6; index++) {
         agent.move(FORWARD, 1)
     }
