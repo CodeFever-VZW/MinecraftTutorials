@@ -1,23 +1,23 @@
 # Minecraft 2 les 7
 
 ```template
-let lantarenGeelStart: Position = null
-let lantarenGeelEinde: Position = null
-let lantarenRoodStart: Position = null
-let lantarenRoodEinde: Position = null
-let lantarenBlauwStart: Position = null
-let lantarenBlauwEinde: Position = null
-let lantaren = 0
+let lampionGeelStart: Position = null
+let lampionGeelEinde: Position = null
+let lampionRoodStart: Position = null
+let lampionRoodEinde: Position = null
+let lampionBlauwStart: Position = null
+let lampionBlauwEinde: Position = null
+let lampion = 0
 function zetVariabelenKlaar () {
-    lantarenGeelStart = world(-15, 106, 0)
-    lantarenGeelEinde = world(-3, 115, 12)
-    lantarenRoodStart = world(-15, 106, 15)
-    lantarenRoodEinde = world(-3, 115, 27)
-    lantarenBlauwStart = world(-15, 106, 30)
-    lantarenBlauwEinde = world(-3, 115, 42)
+    lampionGeelStart = world(-15, 106, 0)
+    lampionGeelEinde = world(-3, 115, 12)
+    lampionRoodStart = world(-15, 106, 15)
+    lampionRoodEinde = world(-3, 115, 27)
+    lampionBlauwStart = world(-15, 106, 30)
+    lampionBlauwEinde = world(-3, 115, 42)
 }
 
-player.onChat("lantarens", function () {
+player.onChat("lampionnen", function () {
     builder.teleportTo(world(0, 106, 0))
     builder.face(EAST)
     zetVariabelenKlaar()
@@ -26,33 +26,33 @@ player.onChat("lantarens", function () {
 
 ```blocks
 //setup variabelen
-let lantarenGeelStart: Position = null
-let lantarenGeelEinde: Position = null
-let lantarenRoodStart: Position = null
-let lantarenRoodEinde: Position = null
-let lantarenBlauwStart: Position = null
-let lantarenBlauwEinde: Position = null
-let lantaren = 0
+let lampionGeelStart: Position = null
+let lampionGeelEinde: Position = null
+let lampionRoodStart: Position = null
+let lampionRoodEinde: Position = null
+let lampionBlauwStart: Position = null
+let lampionBlauwEinde: Position = null
+let lampion = 0
 function zetVariabelenKlaar () {
-    lantarenGeelStart = world(-15, 106, 0)
-    lantarenGeelEinde = world(-3, 115, 12)
-    lantarenRoodStart = world(-15, 106, 15)
-    lantarenRoodEinde = world(-3, 115, 27)
-    lantarenBlauwStart = world(-15, 106, 30)
-    lantarenBlauwEinde = world(-3, 115, 42)
+    lampionGeelStart = world(-15, 106, 0)
+    lampionGeelEinde = world(-3, 115, 12)
+    lampionRoodStart = world(-15, 106, 15)
+    lampionRoodEinde = world(-3, 115, 27)
+    lampionBlauwStart = world(-15, 106, 30)
+    lampionBlauwEinde = world(-3, 115, 42)
 }
 //hoofd code, gaat per vakje een random lanteren zetten op een random hoogte
-player.onChat("lantarens", function () {
+player.onChat("lampionnen", function () {
     builder.teleportTo(world(0, 106, 0))
     builder.face(EAST)
     zetVariabelenKlaar()
     for (let index = 0; index < 5; index++) {
         for (let index = 0; index < 5; index++) {
-            lantaren = randint(1, 5)
-            if (lantaren == 1) {
+            lampion = randint(1, 5)
+            if (lampion == 1) {
                 blocks.clone(
-                lantarenGeelStart,
-                lantarenGeelEinde,
+                lampionGeelStart,
+                lampionGeelEinde,
                 positions.add(
                 builder.position(),
                 pos(0, randint(0, 25), 0)
@@ -60,10 +60,10 @@ player.onChat("lantarens", function () {
                 CloneMask.Replace,
                 CloneMode.Force
                 )
-            } else if (lantaren == 2) {
+            } else if (lampion == 2) {
                 blocks.clone(
-                lantarenRoodStart,
-                lantarenRoodEinde,
+                lampionRoodStart,
+                lampionRoodEinde,
                 positions.add(
                 builder.position(),
                 pos(0, randint(0, 25), 0)
@@ -71,10 +71,10 @@ player.onChat("lantarens", function () {
                 CloneMask.Replace,
                 CloneMode.Force
                 )
-            } else if (lantaren == 3) {
+            } else if (lampion == 3) {
                 blocks.clone(
-                lantarenBlauwStart,
-                lantarenBlauwEinde,
+                lampionBlauwStart,
+                lampionBlauwEinde,
                 positions.add(
                 builder.position(),
                 pos(0, randint(0, 25), 0)
