@@ -1,9 +1,9 @@
 # Nerdland 26
 
 ```template
-
+player.onChat("nerdland", function () {});
 ```
 
 ```block
-player.onChat("level1", function () {});
+player.onChat("nerdland", function () {});
 ```
