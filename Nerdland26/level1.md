@@ -2,8 +2,12 @@
 
 ```template
 player.onChat("start", function () {
-    agent.teleport(world(-25, -60, 40), SOUTH)
+    zetKlaar();
 })
+
+function zetKlaar(){
+    agent.teleport(world(-25, -60, 40), SOUTH)
+};
 ```
 
 ```block
@@ -21,6 +25,6 @@ agent.turn(LEFT_TURN)
 
 Programmeer de agent om van het gouden blok tot het emerald (lichtgroene) blok te gaan. Je kan zelf kiezen hoe je dit doet. De agent zal automatisch een lijn trekken op de blokken waar hij over gaat.
 
-De Agent kan enkel een lijn trekken op de donker groene blokken.
+De Agent kan enkel een lijn trekken op de donkergroene blokken.
 
-Verbind het gouden en groene blok om het leevel te voltooien. Je kan de opdracht starten door "start" te zeggen in de chat.
+Verbind het gouden en groene blok om het level te voltooien. Je kan de opdracht starten door "start" te zeggen in de chat. Open de chat met de 'T' toets.
