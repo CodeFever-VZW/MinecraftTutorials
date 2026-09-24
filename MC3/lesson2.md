@@ -1,18 +1,73 @@
 # Minecraft 3 les 2
 
 ```template
+let Klaar = 0;
+player.onChat("stop", function () {
+    Klaar = 1;
+});
 player.onChat("level1", function () {
-    player.say(":)");
-    agent.teleport(world(-86, 66, 325), NORTH);
-});
+    player.say(":)")
+    agent.teleport(world(-86, 66, 325), NORTH)
+    while (!(agent.detect(AgentDetection.Redstone, DOWN))) {
+        if (!(agent.detect(AgentDetection.Block, RIGHT))) {
+            agent.turn(RIGHT_TURN)
+            agent.move(FORWARD, 1)
+        } else if (!(agent.detect(AgentDetection.Block, FORWARD))) {
+            agent.move(FORWARD, 1)
+        } else if (!(agent.detect(AgentDetection.Block, LEFT))) {
+            agent.turn(LEFT_TURN)
+            agent.move(FORWARD, 1)
+        } else {
+            agent.turn(RIGHT_TURN)
+            agent.turn(RIGHT_TURN)
+        }
+    }
+})
 player.onChat("level2", function () {
-    player.say(":)");
-    agent.teleport(world(-85, 66, 285), NORTH);
-});
+    player.say(":)")
+    Klaar = 0
+    agent.teleport(world(-85, 66, 285), NORTH)
+    while (Klaar == 0) {
+        if (!(agent.detect(AgentDetection.Block, RIGHT))) {
+            agent.turn(RIGHT_TURN)
+            agent.move(FORWARD, 1)
+        } else if (!(agent.detect(AgentDetection.Block, FORWARD))) {
+            agent.move(FORWARD, 1)
+        } else if (!(agent.detect(AgentDetection.Block, LEFT))) {
+            agent.turn(LEFT_TURN)
+            agent.move(FORWARD, 1)
+        } else {
+            agent.turn(RIGHT_TURN)
+            agent.turn(RIGHT_TURN)
+            agent.move(FORWARD, 1)
+        }
+    }
+})
+function plaatsBrugBlok () {
+    agent.setItem(POLISHED_GRANITE, 64, 1)
+    if (!(agent.detect(AgentDetection.Block, UP))) {
+        agent.place(UP)
+    }
+}
 player.onChat("level3", function () {
-    player.say(":)");
-    agent.teleport(world(-84, 67, 224), NORTH);
-});
+    player.say(":)")
+    Klaar = 0
+    agent.teleport(world(-84, 67, 224), NORTH)
+    plaatsBrugBlok()
+    while (Klaar == 0) {
+        agent.move(RIGHT, 1)
+        if (agent.inspect(AgentInspection.Block, DOWN) == REDSTONE_BLOCK) {
+            agent.turn(RIGHT_TURN)
+            plaatsBrugBlok()
+            if (agent.getPosition().getValue(Axis.Z) <= 198) {
+                Klaar = 1
+            }
+        } else {
+            agent.move(LEFT, 1)
+            agent.turn(LEFT_TURN)
+        }
+    }
+})
 
 ```
 
@@ -77,17 +132,36 @@ function plaatsBrugBlok () {
 }
 player.onChat("level3", function () {
     player.say(":)")
+    agent.setItem(POLISHED_GRANITE, 64, 1)
     Klaar = 0
     agent.teleport(world(-84, 67, 224), NORTH)
     plaatsBrugBlok()
     while (Klaar == 0) {
         agent.move(RIGHT, 1)
-        if (agent.detect(AgentDetection.Redstone, DOWN)) {
+        if (agent.inspect(AgentInspection.Block, DOWN) == REDSTONE_BLOCK) {
             agent.turn(RIGHT_TURN)
             plaatsBrugBlok()
         } else {
             agent.move(LEFT, 1)
-            agent.turn(LEFT_TURN)
+            agent.move(FORWARD, 1)
+            if (agent.inspect(AgentInspection.Block, DOWN) == REDSTONE_BLOCK) {
+                plaatsBrugBlok()
+            } else {
+                agent.move(BACK, 1)
+                agent.move(LEFT, 1)
+                if (agent.inspect(AgentInspection.Block, DOWN) == REDSTONE_BLOCK) {
+                    agent.turn(LEFT_TURN)
+                    plaatsBrugBlok()
+                } else {
+                    agent.move(RIGHT, 1)
+                    agent.turn(LEFT_TURN)
+                    agent.turn(LEFT_TURN)
+                    agent.move(FORWARD, 1)
+                }
+            }
+        }
+        if (agent.getPosition().getValue(Axis.Z) <= 198) {
+            Klaar = 1
         }
     }
 })
