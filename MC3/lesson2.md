@@ -2,7 +2,12 @@
 
 ```template
 let Klaar = 0
-function plaatsBrugBlok () {}
+function plaatsBrugBlok () {
+    agent.setItem(POLISHED_GRANITE, 64, 1)
+    if (!(agent.detect(AgentDetection.Block, UP))) {
+        agent.place(UP)
+    }
+}
 player.onChat("stop", function () {
     Klaar = 1
 })
