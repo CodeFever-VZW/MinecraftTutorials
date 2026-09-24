@@ -1,28 +1,13 @@
 # Minecraft 3 les 2
 
 ```template
-let Klaar = 0;
-player.onChat("stop", function () {
-    Klaar = 1;
-});
-player.onChat("level1", function () {
-    player.say(":)")
-    agent.teleport(world(-86, 66, 325), NORTH)
-    while (!(agent.detect(AgentDetection.Redstone, DOWN))) {
-        if (!(agent.detect(AgentDetection.Block, RIGHT))) {
-            agent.turn(RIGHT_TURN)
-            agent.move(FORWARD, 1)
-        } else if (!(agent.detect(AgentDetection.Block, FORWARD))) {
-            agent.move(FORWARD, 1)
-        } else if (!(agent.detect(AgentDetection.Block, LEFT))) {
-            agent.turn(LEFT_TURN)
-            agent.move(FORWARD, 1)
-        } else {
-            agent.turn(RIGHT_TURN)
-            agent.turn(RIGHT_TURN)
-        }
+let Klaar = 0
+function plaatsBrugBlok () {
+    agent.setItem(POLISHED_GRANITE, 64, 1)
+    if (!(agent.detect(AgentDetection.Block, UP))) {
+        agent.place(UP)
     }
-})
+}
 player.onChat("level2", function () {
     player.say(":)")
     Klaar = 0
@@ -42,13 +27,29 @@ player.onChat("level2", function () {
             agent.move(FORWARD, 1)
         }
     }
+    Klaar = 1
 })
-function plaatsBrugBlok () {
-    agent.setItem(POLISHED_GRANITE, 64, 1)
-    if (!(agent.detect(AgentDetection.Block, UP))) {
-        agent.place(UP)
+player.onChat("level1", function () {
+    player.say(":)")
+    agent.teleport(world(-86, 66, 325), NORTH)
+    while (!(agent.detect(AgentDetection.Redstone, DOWN))) {
+        if (!(agent.detect(AgentDetection.Block, RIGHT))) {
+            agent.turn(RIGHT_TURN)
+            agent.move(FORWARD, 1)
+        } else if (!(agent.detect(AgentDetection.Block, FORWARD))) {
+            agent.move(FORWARD, 1)
+        } else if (!(agent.detect(AgentDetection.Block, LEFT))) {
+            agent.turn(LEFT_TURN)
+            agent.move(FORWARD, 1)
+        } else {
+            agent.turn(RIGHT_TURN)
+            agent.turn(RIGHT_TURN)
+        }
     }
-}
+})
+player.onChat("stop", function () {
+    Klaar = 1
+})
 player.onChat("level3", function () {
     player.say(":)")
     Klaar = 0
@@ -82,6 +83,7 @@ player.onChat("level3", function () {
             }
         }
     }
+    Klaar = 1
 })
 
 ```
