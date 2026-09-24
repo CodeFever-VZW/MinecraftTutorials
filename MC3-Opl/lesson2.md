@@ -56,12 +56,30 @@ player.onChat("level3", function () {
     plaatsBrugBlok()
     while (Klaar == 0) {
         agent.move(RIGHT, 1)
-        if (agent.detect(AgentDetection.Redstone, DOWN)) {
+        if (agent.inspect(AgentInspection.Block, DOWN) == REDSTONE_BLOCK) {
             agent.turn(RIGHT_TURN)
             plaatsBrugBlok()
+            if (agent.getPosition().getValue(Axis.Z) <= 198) {
+                Klaar = 1
+            }
         } else {
             agent.move(LEFT, 1)
-            agent.turn(LEFT_TURN)
+            agent.move(FORWARD, 1)
+            if (agent.inspect(AgentInspection.Block, DOWN) == REDSTONE_BLOCK) {
+                plaatsBrugBlok()
+            } else {
+                agent.move(BACK, 1)
+                agent.move(LEFT, 1)
+                if (agent.inspect(AgentInspection.Block, DOWN) == REDSTONE_BLOCK) {
+                    agent.turn(LEFT_TURN)
+                    plaatsBrugBlok()
+                } else {
+                    agent.move(RIGHT, 1)
+                    agent.turn(LEFT_TURN)
+                    agent.turn(LEFT_TURN)
+                    agent.move(FORWARD, 1)
+                }
+            }
         }
     }
 })
@@ -130,22 +148,23 @@ function plaatsBrugBlok () {
 player.onChat("level3", function () {
     player.say(":)")
     agent.setItem(POLISHED_GRANITE, 64, 1)
+    Klaar = 0
     agent.teleport(world(-84, 67, 224), NORTH)
     plaatsBrugBlok()
-    while (klaar !== 0) {
+    while (Klaar == 0) {
         agent.move(RIGHT, 1)
-        if (agent.detect(AgentDetection.Redstone, DOWN)) {
+        if (agent.inspect(AgentInspection.Block, DOWN) == REDSTONE_BLOCK) {
             agent.turn(RIGHT_TURN)
             plaatsBrugBlok()
         } else {
             agent.move(LEFT, 1)
             agent.move(FORWARD, 1)
-            if (agent.detect(AgentDetection.Redstone, DOWN)) {
+            if (agent.inspect(AgentInspection.Block, DOWN) == REDSTONE_BLOCK) {
                 plaatsBrugBlok()
             } else {
                 agent.move(BACK, 1)
                 agent.move(LEFT, 1)
-                if (agent.detect(AgentDetection.Redstone, DOWN)) {
+                if (agent.inspect(AgentInspection.Block, DOWN) == REDSTONE_BLOCK) {
                     agent.turn(LEFT_TURN)
                     plaatsBrugBlok()
                 } else {
@@ -155,6 +174,9 @@ player.onChat("level3", function () {
                     agent.move(FORWARD, 1)
                 }
             }
+        }
+        if (agent.getPosition().getValue(Axis.Z) <= 198) {
+            Klaar = 1
         }
     }
 })
