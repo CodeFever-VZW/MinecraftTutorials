@@ -64,7 +64,22 @@ player.onChat("level3", function () {
             }
         } else {
             agent.move(LEFT, 1)
-            agent.turn(LEFT_TURN)
+            agent.move(FORWARD, 1)
+            if (agent.inspect(AgentInspection.Block, DOWN) == REDSTONE_BLOCK) {
+                plaatsBrugBlok()
+            } else {
+                agent.move(BACK, 1)
+                agent.move(LEFT, 1)
+                if (agent.inspect(AgentInspection.Block, DOWN) == REDSTONE_BLOCK) {
+                    agent.turn(LEFT_TURN)
+                    plaatsBrugBlok()
+                } else {
+                    agent.move(RIGHT, 1)
+                    agent.turn(LEFT_TURN)
+                    agent.turn(LEFT_TURN)
+                    agent.move(FORWARD, 1)
+                }
+            }
         }
     }
 })
