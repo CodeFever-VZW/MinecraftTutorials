@@ -2,6 +2,7 @@
 
 ```template
 let Klaar = 0
+function plaatsBrugBlok () {}
 player.onChat("stop", function () {
     Klaar = 1
 })
