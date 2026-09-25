@@ -65,6 +65,9 @@ player.onChat("level3", function () {
             agent.move(LEFT, 1)
             agent.turn(LEFT_TURN)
         }
+        if (agent.getPosition().getValue(Axis.Z) <= 198) {
+            Klaar = 1
+        }
     }
     Klaar = 1
 })
