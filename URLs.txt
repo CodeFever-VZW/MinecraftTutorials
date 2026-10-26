@@ -22,3 +22,6 @@ https://minecraft.makecode.com/?norunonx=1#tutorial:https://github.com/CodeFever
 https://minecraft.makecode.com/?norunonx=1#tutorial:https://github.com/CodeFever-VZW/MinecraftTutorials/CC1/lesson1-ex1-56
 https://minecraft.makecode.com/?norunonx=1#tutorial:https://github.com/CodeFever-VZW/MinecraftTutorials/CC1/lesson1-no-ex
 https://minecraft.makecode.com/?norunonx=1#tutorial:https://github.com/CodeFever-VZW/MinecraftTutorials/CC1/lesson1-ex2
+
+FTI Kermis (achtbaan):
+https://minecraft.makecode.com/?norunonx=1#tutorial:https://github.com/CodeFever-VZW/MinecraftTutorials/FTIKermis/achtbaan
